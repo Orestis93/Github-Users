@@ -1,0 +1,20 @@
+
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-thumbnail" src="{{selectedUser.avatar_url}}">
+                <a class="btn btn-default btn-block" target="_blank" href="{{selectedUser.html_url}}">
+                    <button mat-button>View Profile</button></a>
+            </div>
+            <div class="col-md-8">
+            <br>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Username: </strong>{{selectedUser.login}}</li>
+                    <li class="list-group-item"><strong>Repos: </strong>{{selectedUser.repos_url}}</li> 
+                    <li class="list-group-item"><strong>Gists: </strong>{{selectedUser.gists_url}}</li> 
+                    <li class="list-group-item"><strong>Subscriptions: </strong>{{selectedUser.subscriptions_url}}</li> 
+                    <li class="list-group-item"><strong>Type: </strong>{{selectedUser.type}}</li> 
+                </ul>
+                <a routerLink="/"><button mat-button class="button primary">Back to Profiles</button></a>
+            </div>    
+        </div>
+   

@@ -1,0 +1,27 @@
+<mat-form-field class="search">
+    <input matInput placeholder="Search Username" [formControl]="searchField" >
+</mat-form-field>
+
+        <table mat-table [dataSource]="users" class="table table-hover" >
+       
+
+          <ng-container matColumnDef="avatar">
+            <th mat-header-cell *matHeaderCellDef scope="row"> Avatar </th>
+            <td mat-cell *matCellDef="let user"> <img src="{{user.avatar_url}}" class="img-thumbnail img-rounded" > </td>
+          </ng-container>
+
+          <ng-container matColumnDef="username">
+            <th mat-header-cell *matHeaderCellDef scope="row">Username </th>
+            <td mat-cell *matCellDef="let user"> <h3>{{user.login}}</h3> </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="url">
+            <th mat-header-cell *matHeaderCellDef> Profile Url </th>
+            <td mat-cell *matCellDef="let user"> {{user.html_url}} </td>
+          </ng-container>
+         
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="pointercursor" (click)="getRecord(row.id)"></tr>
+    
+        </table>
+       <mat-paginator  [pageSize]="20"   [pageSizeOptions]="[10, 20, 40]" showFirstLastButtons></mat-paginator> 

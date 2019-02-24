@@ -1,0 +1,30 @@
+table {
+  width: 70%;
+  margin: 10px auto;
+}
+.hide{
+  display:none;
+}
+
+th.mat-header-cell {
+  text-align: left;
+  max-width: 300px;
+}
+
+.search {
+  width: 69%;
+  margin: 0 auto;
+  vertical-align: middle;
+  display: block;
+}
+.img-thumbnail {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  max-width: 37%;
+  height: auto;
+}
+.pointercursor{
+  cursor:pointer;
+}
